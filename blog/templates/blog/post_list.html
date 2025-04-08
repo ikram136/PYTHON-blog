@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            BLOG SUR DJANGO
+        </title>
+    </head>
+    <body>
+        <header>
+            <h1>
+                <a href="/">
+                    blog sur django
+                    <a>
+            </h1>
+        </header>
+{%for post in posts %}
+        <article>
+            
+            <time>
+                published {{post.published_date}}
+            </time>
+            <h2>
+                <a href="">
+                    {{post.titre}}
+                </a>
+            </h2>
+            <p>{{post.text| linebreaks}} </p>
+        </article>
+        {% endfor %}
+    </body>
+</html>
+
+
+
